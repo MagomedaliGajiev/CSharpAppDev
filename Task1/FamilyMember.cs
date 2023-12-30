@@ -68,14 +68,28 @@ namespace Task1
             }
         }
 
+        public List<FamilyMember> GetSiblings()
+        {
+            List<FamilyMember> siblings = new List<FamilyMember>();
+            if (this.mother != null && this.father != null)
+            {
+                siblings.AddRange(this.mother.children.Where(child => child != this));
+                siblings.AddRange(this.father.children.Where(child => child != this));
+            }
+            if (this.father != null && this.mother == null)
+            {
+                siblings.AddRange(this.father.children.Where(child => child != this));
+            }
+            if (this.father == null && this.mother != null)
+            {
+                siblings.AddRange(this.mother.children.Where(child => child != this));
+            }
+            return siblings;
+        }
+
         public void PrintFamily()
         {
-            FamilyMember secondMember = null;
-            if (this.children != null)
-            {
-                secondMember = this.gender == Gender.Male ? this.children[0].mother : 
-                    this.children[0].father;
-            }
+            FamilyMember secondMember = GetSpouse();
 
             if (secondMember != null)
             {
@@ -84,6 +98,44 @@ namespace Task1
             else
             {
                 PrintFamily(this);
+            }
+        }
+
+        private FamilyMember GetSpouse()
+        {
+            FamilyMember spouse = null;
+            if (this.children != null)
+            {
+                spouse = this.gender == Gender.Male ? this.children[0].mother :
+                    this.children[0].father;
+            }
+
+            return spouse;
+        }
+
+        public void PrintRelatives()
+        {
+            Console.Write($"{this.name} ");
+            if (GetSiblings != null)
+            {
+                Console.Write("->");
+
+                var siblings = GetSiblings();
+                if (siblings.Count > 0)
+                {
+                    foreach (var member in siblings.GetRange(0, siblings.Count - 1))
+                    {
+                        Console.Write($"{member.name} ->");
+                    }
+                    Console.Write(siblings[siblings.Count - 1].name);
+                }
+                
+            }
+            if (GetSpouse() != null)
+            {
+                Console.WriteLine();
+                Console.WriteLine("|");
+                Console.Write($"{GetSpouse().name}");
             }
         }
 
