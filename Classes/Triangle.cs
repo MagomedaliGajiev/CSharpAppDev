@@ -6,14 +6,21 @@ using System.Threading.Tasks;
 
 namespace Classes
 {
-    public class Triangle : ITest
+    public class Triangle : Figure
     {
-        public double a;
+        public double b;
+        public double c;
         public string Name { get; set; }
+
 
         public double Dioganal()
         {
             return a;
+        }
+
+        public override string ToString()
+        {
+            return base.ToString();
         }
     }
 }
