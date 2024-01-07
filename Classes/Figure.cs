@@ -8,14 +8,14 @@ namespace Classes
 {
     public class Figure
     {
-        double a; // сторона фигуры
+        public double a; // сторона фигуры
 
-        public double P()
+        public virtual double P()
         {
             return a;
         }
 
-        public double S()
+        public virtual double S()
         {
             return 0;
         }
