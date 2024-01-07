@@ -5,10 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
-namespace Task1
+namespace Classes
 {
-    enum Gender { Male, Female }
-    class FamilyMember
+    public class FamilyMember
     {
         public string name { get; set; }
         public Gender gender { get; set; }

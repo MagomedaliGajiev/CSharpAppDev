@@ -1,5 +1,8 @@
-﻿namespace Task1
+﻿using Classes;
+
+namespace Seminar3
 {
+    
     class Program
     {
         static void Main(string[] args)
