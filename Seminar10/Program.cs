@@ -93,7 +93,7 @@ namespace Seminar10
                 get { return name; }
             }
 
-            public string GetFormat
+            public Format GetFormat
             {
                 get { return format; }
             }
