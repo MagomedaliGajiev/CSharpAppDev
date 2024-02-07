@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Seminar9", "Seminar7\Semina
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seminar10", "Seminar10\Seminar10.csproj", "{FBB455C1-9E45-41D7-BD3B-3ED15EA26FA4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSearchUtility", "FileSearchUtility\FileSearchUtility.csproj", "{9155C482-26CD-4C64-8EFE-B92EFEA1A6E0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{FBB455C1-9E45-41D7-BD3B-3ED15EA26FA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBB455C1-9E45-41D7-BD3B-3ED15EA26FA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBB455C1-9E45-41D7-BD3B-3ED15EA26FA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9155C482-26CD-4C64-8EFE-B92EFEA1A6E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9155C482-26CD-4C64-8EFE-B92EFEA1A6E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9155C482-26CD-4C64-8EFE-B92EFEA1A6E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9155C482-26CD-4C64-8EFE-B92EFEA1A6E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
